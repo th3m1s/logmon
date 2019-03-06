@@ -9,6 +9,5 @@ chmod 700 /etc/init.d/logmon
 chmod 700 /etc/logmon/logmon.pl
 chmod 600 /etc/logmon/logmon.conf
 
-chkconfig --add logmon
-chkconfig --level 345 logmon on
-
+update-rc.d logmon start 99 3 4 5
+service logmon restart
